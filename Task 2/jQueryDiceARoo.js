@@ -1,14 +1,5 @@
 $(function() {
 
-    var levels = {
-        0:"red",
-        1:"blue",
-        2:"green",
-        3:"yellow",
-        4:"silver"
-    };
-    
-    var currentLevel = 0;
     var pot = 0;
 
     var diceTypes = {
