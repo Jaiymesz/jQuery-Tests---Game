@@ -93,7 +93,7 @@ $(function() {
                     showDice(levels[currentLevel], diceTypes[roll], typesToCommentary[5]);
                 }
             }else{
-                if(randomNumber(1,5)==4){
+                if(randomNumber(1,100)==37){
                     pot += 1000000;
                     showDice(levels[currentLevel], diceTypes[roll], typesToCommentary[8]+pot+" Points!");
                     endGame();

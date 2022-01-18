@@ -86,7 +86,7 @@ $(function() {
                     $("#commentary").html(typesToCommentary[5]);
                 }
             }else{
-                if(randomNumber(1,5)==4){
+                if(randomNumber(1,100)==37){
                     pot += 1000000;
                     $("#commentary").html(typesToCommentary[8]+pot+" Points!");
                     endGame();
