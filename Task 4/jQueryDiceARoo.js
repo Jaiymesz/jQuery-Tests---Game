@@ -24,7 +24,9 @@ $(function() {
         1:"Yay! You won ",
         2:"Ahh.. nothing happened.",
         3:"You can go to the next level, woohoo!",
-        4:"You died! You've lost your pot now."
+        4:"You died! You've lost your pot now.",
+        5:"So close, but you can't continue just yet..",
+        6:"Woah, you almost died! Lucky you."
     };
     
     function randomNumber(min, max){
@@ -41,8 +43,8 @@ $(function() {
         let max = 10;
         if(currentLevel>0){
             for(let i=1; i<Object.keys(levels).length; i++){
-                if(currentLevel==i)break;
                 max = max * 2;
+                if(currentLevel==i)break;
             }
             min = max/2;
         }
@@ -64,13 +66,22 @@ $(function() {
             $("#commentary").html(typesToCommentary[roll]+points+" Points!");
         }else if(diceTypes[roll]=="continue"){
             if(currentLevel<4){
-                currentLevel++;
-                $("#commentary").html(typesToCommentary[roll]);
+                if(randomNumber(1,3)==3){
+                    currentLevel++;
+                    $("#commentary").html(typesToCommentary[roll]);
+                }else{                    
+                    $("#commentary").html(typesToCommentary[5]);
+                }
             }else{
                 
             }
-        }
-        else $("#commentary").html(typesToCommentary[roll]);
+        }else if(diceTypes[roll]=="death"){
+            if(randomNumber(1,2)==1){
+                pot = 0;
+                currentLevel = 0;
+                $("#commentary").html(typesToCommentary[roll]);
+            }else $("#commentary").html(typesToCommentary[6]);
+        }else $("#commentary").html(typesToCommentary[roll]);
         
         $("#quit").html("Stop Playing and Take "+pot+" Points")
     })
