@@ -1,5 +1,5 @@
 # jQuery DOM Manipulation - Dice-A-Roo
-You should create a Javascript file called jQueryDiceARoo.js locally to this HTML file - all code should be in this file. Do not edit this HTML document.\
+You should create a Javascript file called jQueryDiceARoo.js locally to this HTML file - all code should be in this file. Do not edit this HTML document.
 
 # Rules of the Game
 - The game is made up of 5 Levels, they are Red >> Blue >> Green >> Yellow >> Silver.
