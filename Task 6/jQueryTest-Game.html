@@ -22,12 +22,12 @@
     </head>
     <body>
 
-        <h1>jQuery DOM Manipulation - Dice-A-Roo</h1>        
+        <h1>jQuery/JS - Dice-A-Roo</h1>        
 
         <!-- Below is the only HTML you need to use in the tasks, do *NOT* adjust this HTML in any way -->
         
         <div id="gameplay">
-            <img src="./dice/red-nothing.gif" id="dice"/>
+            <img src="../dice/red-nothing.gif" id="dice"/>
             <p id="commentary">Let's play Dice-a-Roo!</p>
             <button id="roll">Roll Dice</button> <br/>
             <button id="quit">Stop Playing and Take 0 Points</button>
@@ -55,28 +55,28 @@
         <p>A folder called "dice" is provided with all the colour dices, below is a description for what each dice is for:</p>
         <table style="border-style: dashed;">
             <tbody><tr>
-            <td width="90"><img src="./dice/red-lose.gif"></td>  
-            <td><strong>Lose</strong> a select amount of points from the pot. <span class="code">./dice/<b><i>color</i></b>-lose.gif</span></td>
+            <td width="90"><img src="../dice/red-lose.gif"></td>  
+            <td><strong>Lose</strong> a select amount of points from the pot. <span class="code">../dice/<b><i>color</i></b>-lose.gif</span></td>
             </tr>
             <tr>
-            <td><img src="./dice/blue-win.gif"></td>
-            <td><strong>Win</strong> a select amount of points for the pot. <span class="code">./dice/<b><i>color</i></b>-win.gif</span></td>
+            <td><img src="../dice/blue-win.gif"></td>
+            <td><strong>Win</strong> a select amount of points for the pot. <span class="code">../dice/<b><i>color</i></b>-win.gif</span></td>
             </tr>
             <tr>
-            <td><img src="./dice/green-nothing.gif"></td>
-            <td>Nothing happens. <span class="code">./dice/<b><i>color</i></b>-nothing.gif</span></td>
+            <td><img src="../dice/green-nothing.gif"></td>
+            <td>Nothing happens. <span class="code">../dice/<b><i>color</i></b>-nothing.gif</span></td>
             </tr>
             <tr>
-            <td><img src="./dice/yellow-continue.gif"></td>
-            <td>A chance of advancing to the next level. <span class="code">./dice/<b><i>color</i></b>-continue.gif</span></td>
+            <td><img src="../dice/yellow-continue.gif"></td>
+            <td>A chance of advancing to the next level. <span class="code">../dice/<b><i>color</i></b>-continue.gif</span></td>
             </tr>
             <tr>
-            <td><img src="./dice/red-death.gif"></td>
-            <td>A chance of having the game end. <span class="code">./dice/<b><i>color</i></b>-death.gif</span></td>
+            <td><img src="../dice/red-death.gif"></td>
+            <td>A chance of having the game end. <span class="code">../dice/<b><i>color</i></b>-death.gif</span></td>
             </tr>
             <tr>
-            <td><img src="./dice/silver-jackpot.gif"></td>
-            <td><strong>Win</strong> the jackpot! (Only on the silver die.) <span class="code">./dice/silver-jackpot.gif</span></td>
+            <td><img src="../dice/silver-jackpot.gif"></td>
+            <td><strong>Win</strong> the jackpot! (Only on the silver die.) <span class="code">../dice/silver-jackpot.gif</span></td>
             </tr> 
             </tbody></table>
 
@@ -134,7 +134,7 @@
         <h1>Useful Hints</h1>
         <ul>
             <li>It may be easier to create a key-value pair array for the dice types, ie: 0=>"lose",1=>"win" etc for randomly selecting each dice roll.</li>
-            <li>You can load images by using variables, such as <span class="code">$("#dice").attr("src","./dice/" + color + "-"+ type +".gif");</span> where color could be "red" and type could be any of the 5 types such as "lose"</li>
+            <li>You can load images by using variables, such as <span class="code">$("#dice").attr("src","../dice/" + color + "-"+ type +".gif");</span> where color could be "red" and type could be any of the 5 types such as "lose"</li>
             <li>You may wish to create your own random function such as <span class="code">randomNumber(low,high);</span> which could then be used for both dice rolls, probability within those rolls, as well as points values for "win" and "lose".</li>
         </ul>
     </body>
